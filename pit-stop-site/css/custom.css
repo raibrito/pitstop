@@ -187,7 +187,7 @@ h4 {
 }
 
 .melhor-opcao-header {
-  background-color: #be1523 !important; /* coloque a cor que quiser */
+  background-color: #be1523 !important;
   color: white !important;
 }
 
@@ -665,6 +665,9 @@ html {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .pricing-card:hover {
@@ -673,8 +676,14 @@ html {
 }
 
 .pricing-featured {
-  position: relative;
-  border: 3px solid var(--azul-pitstop);
+  position: relative;  
+}
+
+.pricing-header {
+    min-height: 150px; /* Ajuste até ficar igual aos outros */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .badge-popular {
@@ -690,6 +699,13 @@ html {
   z-index: 10;
 }
 
+.pricing-card a.btn {
+    margin: auto 0 0 0 !important; /* Empurra o botão para baixo */
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    border-radius: 0 0 18px 18px !important; /* Arredonda apenas as bordas inferiores */
+}
+
 .pricing-header {
   padding: 2.5rem 2rem;
   text-align: center;
@@ -700,8 +716,7 @@ html {
 }
 
 .pricing-body {
-  padding: 2rem;
-  
+  flex-grow: 1;
 }
 
 .pricing-body ul li {
@@ -711,17 +726,17 @@ html {
 
 .pricing-body ul li:last-child {
   border-bottom: none;
-} 
+}
 
-.plano-conforto{
+.plano-conforto {
   color: white;
 }
 
-.plano-premium{
+.plano-premium {
   color: white;
-} 
+}
 
-.txt-sub-plano{
+.txt-sub-plano {
   color: white;
 }
 
@@ -736,8 +751,8 @@ html {
   height: 100%;
 }
 
-.titulo-header{
-  color: white !important; 
+.titulo-header {
+  color: white !important;
 }
 
 .knowledge-category-card:hover {
@@ -818,49 +833,30 @@ html {
   margin-bottom: 10px;
 }
 
-
 /* Reduz a largura dos cards no desktop */
 #planos .pricing-card {
-    max-width: 340px;
-    margin-inline: auto;
+  max-width: 340px;
+  margin-inline: auto;
 }
 
 /* Aumenta respiro lateral dos cards */
 #planos .col-lg-4 {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Mais espaço dentro dos cards */
 .pricing-card {
-  
   border-radius: 18px;
 }
 
 /* Espaçamento entre header, itens e botão */
 .pricing-header {
-    padding: 25px 20px !important;
+  padding: 25px 20px !important;
 }
 
 .pricing-body {
-    padding: 20px;
+  padding: 20px;
 }
 
-/* Ajuste mais suave no botão */
-.pricing-card a.btn {
-    margin-top: 25px !important;
-}
-
-/* No mobile, diminuir esticamento geral */
-@media (max-width: 768px) {
-    #planos .pricing-card {
-        max-width: 90%;
-    }
-
-    #planos .col-lg-4 {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-
+/* Removed old button margin rule - now handled by flexbox structure in HTML */
