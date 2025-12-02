@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIT STOP - Consultoria de Veículos</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Updated to use Remix Icon for more modern icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using modern Poppins font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+                <img src="public/images/pic-nova-logo-branca.webp" alt="logo PIT STOP" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparacao">Comparação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogo">Catálogo</a>
+                    </li>
+                    <!-- Added new navigation items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="base-conhecimento.html">Base de Conhecimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comunidade.html">Comunidade</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-vermelho-pitstop btn-sm" href="login.html">
+                            <i class="ri-user-line me-1"></i>Entrar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 slide-in-left">
+                    <h1 class="display-3 fw-bold mb-4 text-white">Encontre o carro perfeito para você</h1>
+                    <p class="lead mb-4 text-white-50">Comparação inteligente, dados reais e consultoria especializada para sua melhor escolha</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#quiz" class="btn btn-vermelho-pitstop btn-lg btn-pulse">
+                            <i class="ri-lightbulb-line me-2"></i>Encontrar Meu Veículo
+                        </a>
+                        <a href="#comparacao" class="btn btn-outline-light btn-lg">
+                            <i class="ri-arrow-left-right-line me-2"></i>Comparar Modelos
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 slide-in-right">
+                    <div class="hero-image text-center floating-element">
+                        <img src="public/images/pic-banner-carro-vermelho.webp" alt="banner" class="img-fluid" style="max-height: 500px; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New interactive stats section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number counter" data-target="500">0</div>
+                        <div class="text-white mt-2">Veículos Avaliados</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number counter" data-target="1200">0</div>
+                        <div class="text-white mt-2">Clientes Satisfeitos</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number counter" data-target="15">0</div>
+                        <div class="text-white mt-2">Anos de Experiência</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-number counter" data-target="98">0</div>
+                        <div class="text-white mt-2">% de Aprovação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New interactive features section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold gradient-text display-5">Por que escolher a PIT STOP?</h2>
+                <p class="text-muted lead">Sua jornada para o veículo ideal começa aqui</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ri-search-eye-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Análise Detalhada</h4>
+                        <p class="text-muted">Avaliamos cada aspecto técnico e financeiro para você tomar a melhor decisão</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ri-shield-check-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Segurança Garantida</h4>
+                        <p class="text-muted">Verificação completa de histórico e documentação de todos os veículos</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="ri-customer-service-2-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Suporte Especializado</h4>
+                        <p class="text-muted">Equipe de consultores prontos para tirar suas dúvidas 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="cta-section text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3 text-white">Pronto para encontrar seu próximo veículo?</h2>
+                        <p class="mb-4 text-white-50">Nossa equipe especializada está pronta para ajudá-lo a tomar a melhor decisão</p>
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="#quiz" class="btn btn-light btn-lg">
+                                <i class="ri-chat-3-line me-2"></i>Agendar Consultoria
+                            </a>
+                            <a href="#catalogo" class="btn btn-outline-light btn-lg">
+                                <i class="ri-search-line me-2"></i>Ver Catálogo Completo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Plans Section -->
+    <section id="planos" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold gradient-text display-5">Planos de Pagamento</h2>
+            <p class="text-muted lead">Escolha o plano ideal para suas necessidades</p>
+        </div>
+        
+        <div class="row g-4">
+            
+            <!-- Plano Gratuito -->
+            <div class="col-lg-4">
+                <div class="pricing-card h-100">
+                    
+                    <div class="pricing-header bg-light">
+                        <h3 class="fw-bold text-dark">GRATUITO</h3>
+                        <div class="pricing-value">
+                            <span class="h1 fw-bold text-dark">R$ 0</span>
+                            <span class="text-muted">/mês</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-body">
+                        <ul class="list-unstyled">
+                            <li><i class="ri-check-line text-success me-2"></i>Análise de perfil (quiz)</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Comparação de veículos</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Conhecimentos gerais e mecânicos</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Ficha técnica</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Visualização de modelos</li>
+                        </ul>
+                    </div>
+
+                    <a href="cadastro.html" class="btn btn-outline-dark w-100 mt-4">Começar Grátis</a>
+                </div>
+            </div>
+            
+            <!-- Plano Conforto -->
+            <div class="col-lg-4">
+                <div class="pricing-card pricing-featured h-100">
+
+                    <div class="pricing-header bg-azul-pitstop text-white">
+                        <h3 class="plano-conforto">CONFORTO</h3>
+                        <p class="txt-sub-plano">Para Pessoa Física</p>
+                        <div class="pricing-value">
+                            <span class="h1 fw-bold">R$ 180,00</span>
+                            <span class="text-white-50">/anual</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-body">
+                        <p class="text-muted small fw-semibold mb-3">Todos os recursos GRATUITO, mais:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="ri-check-line text-success me-2"></i>Recomendação personalizada</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Análise do orçamento</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Comparação detalhada</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Simulação básica</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Relatório PDF exportável</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Suporte via chat 24h</li>
+                        </ul>
+                    </div>
+
+                    <a href="cadastro.html" class="btn btn-azul-pitstop w-100 mt-4">Assinar Agora</a>
+                </div>
+            </div>
+            
+            <!-- Plano Premium -->
+            <div class="col-lg-4">
+                <div class="pricing-card h-100">
+
+                    <div class="pricing-header bg-vermelho-pitstop text-white">
+                        <h3 class="plano-premium">PREMIUM</h3>
+                        <p class="txt-sub-plano">Para Pessoa Júridica</p>
+                        <div class="pricing-value">
+                            <span class="h1 fw-bold">R$ 300,00</span>
+                            <span class="text-white-50">/mês</span>
+                        </div>
+                    </div>
+
+                    <div class="pricing-body">
+                        <p class="text-muted small fw-semibold mb-3">Todos os recursos CONFORTO, mais:</p>
+                        <ul class="list-unstyled">
+                            <li><i class="ri-check-line text-success me-2"></i>Consultoria de otimização de frota (mensal)</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Relatório de TCO (Custo Total de Propriedade)</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Relatório para tomada de decisão para diretoria</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Recomendação de veículos corporativos por tipo de operação</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Avaliação de carro da empresa para troca com valor de mercado atualizado</li>
+                            <li><i class="ri-check-line text-success me-2"></i>Suporte prioritário 24h com atendimento dedicado</li>
+                        </ul>
+                    </div>
+
+                    <a href="cadastro.html" class="btn btn-vermelho-pitstop w-100 mt-4">Assinar Premium</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Carros Mais Vendidos -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Carros Mais Vendidos 2024</h2>
+                <p class="text-muted">Os modelos mais populares do mercado brasileiro</p>
+            </div>
+            <div class="row g-4" id="carros-mais-vendidos">
+                <!-- Dinâmico via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sistema de Comparação -->
+    <section id="comparacao" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Compare Veículos</h2>
+                <p class="text-muted">Analise lado a lado as especificações dos modelos</p>
+            </div>
+
+            <!-- Seleção de Veículos -->
+            <div class="row mb-4 align-items-end">
+                <div class="col-md-5">
+                    <label class="form-label fw-bold">Primeiro Veículo</label>
+                    <select class="form-select form-select-lg mb-3" id="veiculo1">
+                        <option value="">Selecione um veículo</option>
+                    </select>
+                </div>
+                <div class="col-md-2 text-center align-self-center">
+                    <span class="fw-bold fs-3 text-muted">VS</span>
+                </div>
+                <div class="col-md-5">
+                    <label class="form-label fw-bold">Segundo Veículo</label>
+                    <select class="form-select form-select-lg mb-3" id="veiculo2">
+                        <option value="">Selecione um veículo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center mb-4">
+                <button class="btn btn-vermelho-pitstop btn-lg" id="btnComparar">
+                    <i class="ri-arrow-left-right-line me-2"></i>Comparar Veículos
+                </button>
+            </div>
+
+            <!-- Resultado da Comparação -->
+            <div id="resultado-comparacao" class="d-none">
+                <!-- Gráfico Radial -->
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-azul-pitstop text-white">
+                                <h5 class="card-title mb-0">Comparação Visual</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="graficoRadial" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela de Especificações -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-azul-pitstop text-white">
+                                <h5 class="card-title mb-0">Especificações Técnicas</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped" id="tabela-comparacao">
+                                        <thead>
+                                            <tr>
+                                                <th>Característica</th>
+                                                <th id="nome-veiculo1">Veículo 1</th>
+                                                <th id="nome-veiculo2">Veículo 2</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Preenchido via JavaScript -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Quiz Section -->
+    <section id="quiz" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Encontre Seu Carro Ideal</h2>
+                <p class="text-muted">Responda algumas perguntas e receba recomendações personalizadas</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-4 p-md-5">
+                            <div id="quiz-container">
+                                <!-- Conteúdo do quiz carregado via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Veículos -->
+    <section id="catalogo" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Catálogo de Veículos</h2>
+                <p class="text-muted">Explore nossa seleção completa de veículos</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label fw-semibold">Marca</label>
+                                    <select class="form-select" id="filtro-marca">
+                                        <option value="">Todas as marcas</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label fw-semibold">Ano</label>
+                                    <select class="form-select" id="filtro-ano">
+                                        <option value="">Todos os anos</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label fw-semibold">Combustível</label>
+                                    <select class="form-select" id="filtro-combustivel">
+                                        <option value="">Todos</option>
+                                        <option value="Flex">Flex</option>
+                                        <option value="Gasolina">Gasolina</option>
+                                        <option value="Etanol">Etanol</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label fw-semibold">Preço Máximo</label>
+                                    <select class="form-select" id="filtro-preco">
+                                        <option value="">Qualquer</option>
+                                        <option value="50000">Até R$50.000</option>
+                                        <option value="100000">Até R$100.000</option>
+                                        <option value="200000">Até R$200.000</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 d-flex align-items-end">
+                                    <button class="btn btn-azul-pitstop w-100" id="btn-filtrar">
+                                        <i class="ri-filter-3-line me-2"></i>Filtrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lista de Veículos -->
+            <div class="row g-4" id="lista-veiculos">
+                <!-- Populated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand fw-bold d-flex align-items-center mb-3" href="#home">
+                        <img src="public/images/pic-nova-logo-ps.webp" alt="logo PIT STOP" height="40" class="me-2">
+                    </a>
+                    <p class="text-white-50">Sua consultoria automotiva de confiança</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="text-white-50"><i class="ri-mail-line me-2"></i>veiculospitstop@pitstop.com.br</p>
+                    <p class="text-white-50"><i class="ri-phone-line me-2"></i>(31) 91234-5678</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Redes Sociais</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/pitstopconsultoria/" target="_blank" class="text-white"><i class="ri-instagram-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-facebook-circle-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-linkedin-box-line fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">&copy; 2025 PIT STOP. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+    
+    <!-- Added counter animation script -->
+    <script>
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        const countUp = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(countUp, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+        
+        // Trigger animation when stats section is in view
+        const statsSection = document.querySelector('.stats-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    countUp();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script> 
+</body>
+
+</html>

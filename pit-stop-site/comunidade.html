@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade - PIT STOP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="public/images/pic-nova-logo-branca.webp" alt="logo PIT STOP" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#comparacao">Comparação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="base-conhecimento.html">Base de Conhecimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="comunidade.html">Comunidade</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-vermelho-pitstop btn-sm" href="login.html">
+                            <i class="ri-user-line me-1"></i>Entrar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white d-flex align-items-center" style="min-height: 400px;">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="card-header titulo-header text-white text-center fw-bold">Comunidade PIT STOP</h1><br>
+                    <p class="lead mb-4">Conecte-se com outros entusiastas automotivos, compartilhe experiências e aprenda com a comunidade</p>
+                    <button class="btn btn-vermelho-pitstop btn-lg" data-bs-toggle="modal" data-bs-target="#newPostModal">
+                        <i class="ri-add-circle-line me-2"></i>Criar Nova Publicação
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter -->
+    <section class="py-4 bg-light sticky-top" style="top: 70px; z-index: 100;">
+        <div class="container">
+            <div class="d-flex gap-3 flex-wrap justify-content-center">
+                <button class="btn btn-azul-pitstop active" data-category="todos">
+                    <i class="ri-apps-line me-2"></i>Todos
+                </button>
+                <button class="btn btn-outline-azul-pitstop" data-category="eletricos">
+                    <i class="ri-flashlight-line me-2"></i>Veículos Elétricos
+                </button>
+                <button class="btn btn-outline-azul-pitstop" data-category="diy">
+                    <i class="ri-tools-line me-2"></i>Reparos DIY
+                </button>
+                <button class="btn btn-outline-azul-pitstop" data-category="manutencao">
+                    <i class="ri-settings-3-line me-2"></i>Manutenção
+                </button>
+                <button class="btn btn-outline-azul-pitstop" data-category="compra">
+                    <i class="ri-shopping-cart-line me-2"></i>Compra e Venda
+                </button>
+                <button class="btn btn-outline-azul-pitstop" data-category="modificacoes">
+                    <i class="ri-contrast-line me-2"></i>Modificações
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Posts -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3 mb-4">
+                    <div class="card shadow-sm border-0 mb-4">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="ri-fire-line text-vermelho-pitstop me-2"></i>Tópicos em Alta</h6>
+                            <div class="d-flex flex-column gap-2">
+                                <span class="badge bg-light text-dark">#novocorolla</span>
+                                <span class="badge bg-light text-dark">#cuidadosverao</span>
+                                <span class="badge bg-light text-dark">#primeirocar ro</span>
+                                <span class="badge bg-light text-dark">#manutenção</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3"><i class="ri-user-star-line text-vermelho-pitstop me-2"></i>Top Membros</h6>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-azul-pitstop text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                        <span class="fw-bold">JS</span>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold small">João Silva</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">245 posts</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-vermelho-pitstop text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                        <span class="fw-bold">MO</span>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold small">Maria Oliveira</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">198 posts</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="bg-azul-pitstop text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                        <span class="fw-bold">PC</span>
+                                    </div>
+                                    <div>
+                                        <div class="fw-semibold small">Pedro Costa</div>
+                                        <div class="text-muted" style="font-size: 0.75rem;">156 posts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Posts Feed -->
+                <div class="col-lg-9">
+                    <!-- Post 1 -->
+                    <div class="card shadow-sm border-0 mb-4 community-post">
+                        <div class="card-body">
+                            <div class="d-flex gap-3 mb-3">
+                                <div class="bg-azul-pitstop text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">CS</span>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Carlos Santos</h6>
+                                            <small class="text-muted">Há 2 horas • <span class="badge bg-azul-pitstop">Veículos Elétricos</span></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5 class="fw-bold mb-3">Vale a pena investir em um carro elétrico em 2025?</h5>
+                            <p class="text-muted">Estou considerando comprar meu primeiro carro elétrico, mas estou em dúvida sobre a infraestrutura de recarga na minha cidade. Alguém tem experiência com isso? Quais são os prós e contras que vocês identificaram?</p>
+                            
+                            <div class="d-flex gap-4 mt-4">
+                                <button class="btn btn-sm btn-light" onclick="likePost(1)">
+                                    <i class="ri-thumb-up-line me-1"></i><span id="likes-1">24</span>
+                                </button>
+                                <button class="btn btn-sm btn-light" data-bs-toggle="collapse" data-bs-target="#comments-1">
+                                    <i class="ri-chat-3-line me-1"></i>12 Comentários
+                                </button>
+                                <button class="btn btn-sm btn-light">
+                                    <i class="ri-share-forward-line me-1"></i>Compartilhar
+                                </button>
+                            </div>
+                            
+                            <div class="collapse mt-4" id="comments-1">
+                                <div class="border-top pt-3">
+                                    <div class="mb-3">
+                                        <div class="d-flex gap-2 mb-2">
+                                            <div class="bg-vermelho-pitstop text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 35px; height: 35px;">
+                                                <span class="small fw-bold">AM</span>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <div class="bg-light p-3 rounded-3">
+                                                    <h6 class="fw-semibold mb-1 small">Ana Maria</h6>
+                                                    <p class="mb-0 small">Tenho um elétrico há 6 meses e estou adorando! A economia é real e a dirigibilidade é excelente.</p>
+                                                </div>
+                                                <div class="d-flex gap-3 mt-1">
+                                                    <small class="text-muted">Há 1 hora</small>
+                                                    <button class="btn btn-sm btn-link p-0 text-decoration-none small">Responder</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Adicionar um comentário...">
+                                        <button class="btn btn-azul-pitstop">
+                                            <i class="ri-send-plane-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="card shadow-sm border-0 mb-4 community-post">
+                        <div class="card-body">
+                            <div class="d-flex gap-3 mb-3">
+                                <div class="bg-vermelho-pitstop text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">RF</span>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Ricardo Fernandes</h6>
+                                            <small class="text-muted">Há 5 horas • <span class="badge bg-vermelho-pitstop">Reparos DIY</span></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5 class="fw-bold mb-3">Tutorial: Como trocar pastilhas de freio em casa</h5>
+                            <p class="text-muted">Pessoal, consegui trocar as pastilhas do meu carro em casa e economizei mais de R$300! Vou compartilhar o passo a passo...</p>
+                            
+                            <div class="d-flex gap-4 mt-4">
+                                <button class="btn btn-sm btn-light" onclick="likePost(2)">
+                                    <i class="ri-thumb-up-line me-1"></i><span id="likes-2">47</span>
+                                </button>
+                                <button class="btn btn-sm btn-light" data-bs-toggle="collapse" data-bs-target="#comments-2">
+                                    <i class="ri-chat-3-line me-1"></i>8 Comentários
+                                </button>
+                                <button class="btn btn-sm btn-light">
+                                    <i class="ri-share-forward-line me-1"></i>Compartilhar
+                                </button>
+                            </div>
+                            
+                            <div class="collapse mt-4" id="comments-2">
+                                <div class="border-top pt-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Adicionar um comentário...">
+                                        <button class="btn btn-azul-pitstop">
+                                            <i class="ri-send-plane-fill"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="card shadow-sm border-0 mb-4 community-post">
+                        <div class="card-body">
+                            <div class="d-flex gap-3 mb-3">
+                                <div class="bg-azul-pitstop text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px;">
+                                    <span class="fw-bold">LS</span>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Luciana Silva</h6>
+                                            <small class="text-muted">Há 1 dia • <span class="badge bg-azul-pitstop">Compra e Venda</span></small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h5 class="fw-bold mb-3">Dicas para negociar na compra do primeiro carro</h5>
+                            <p class="text-muted">Acabei de comprar meu primeiro carro e quero compartilhar algumas dicas que me ajudaram a conseguir um bom desconto...</p>
+                            
+                            <div class="d-flex gap-4 mt-4">
+                                <button class="btn btn-sm btn-light" onclick="likePost(3)">
+                                    <i class="ri-thumb-up-line me-1"></i><span id="likes-3">62</span>
+                                </button>
+                                <button class="btn btn-sm btn-light" data-bs-toggle="collapse" data-bs-target="#comments-3">
+                                    <i class="ri-chat-3-line me-1"></i>15 Comentários
+                                </button>
+                                <button class="btn btn-sm btn-light">
+                                    <i class="ri-share-forward-line me-1"></i>Compartilhar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-outline-azul-pitstop">
+                            <i class="ri-refresh-line me-2"></i>Carregar Mais Publicações
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Post Modal -->
+    <div class="modal fade" id="newPostModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold">Criar Nova Publicação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Categoria</label>
+                        <select class="form-select">
+                            <option>Selecione uma categoria</option>
+                            <option>Veículos Elétricos</option>
+                            <option>Reparos DIY</option>
+                            <option>Manutenção</option>
+                            <option>Compra e Venda</option>
+                            <option>Modificações</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Título</label>
+                        <input type="text" class="form-control" placeholder="Dê um título para sua publicação">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Conteúdo</label>
+                        <textarea class="form-control" rows="6" placeholder="Compartilhe sua experiência, dúvida ou conhecimento..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Imagens (opcional)</label>
+                        <input type="file" class="form-control" multiple accept="image/*">
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-vermelho-pitstop">
+                        <i class="ri-send-plane-fill me-2"></i>Publicar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand fw-bold d-flex align-items-center mb-3" href="index.html">
+                        <img src="public/images/pic-nova-logo-ps.webp" alt="logo PIT STOP" height="40" class="me-2">
+                    </a>
+                    <p class="text-white-50">Sua consultoria automotiva de confiança</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="text-white-50"><i class="ri-mail-line me-2"></i>veiculospitstop@pitstop.com.br</p>
+                    <p class="text-white-50"><i class="ri-phone-line me-2"></i>(31) 91234-5678</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Redes Sociais</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/pitstopconsultoria/" target="_blank" class="text-white"><i class="ri-instagram-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-facebook-circle-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-linkedin-box-line fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">&copy; 2025 PIT STOP. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function likePost(postId) {
+            const likesElement = document.getElementById(`likes-${postId}`);
+            const currentLikes = parseInt(likesElement.textContent);
+            likesElement.textContent = currentLikes + 1;
+            console.log('[v0] Post liked:', postId);
+        }
+        
+        // Category filter
+        document.querySelectorAll('[data-category]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('[data-category]').forEach(b => {
+                    b.classList.remove('btn-azul-pitstop', 'active');
+                    b.classList.add('btn-outline-azul-pitstop');
+                });
+                this.classList.remove('btn-outline-azul-pitstop');
+                this.classList.add('btn-azul-pitstop', 'active');
+                console.log('[v0] Filtering by category:', this.dataset.category);
+            });
+        });
+    </script>
+</body>
+
+</html>

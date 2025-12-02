@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Conhecimento - PIT STOP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="public/images/pic-nova-logo-branca.webp" alt="logo PIT STOP" height="40" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#comparacao">Comparação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#catalogo">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="base-conhecimento.html">Base de Conhecimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comunidade.html">Comunidade</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-vermelho-pitstop btn-sm" href="login.html">
+                            <i class="ri-user-line me-1"></i>Entrar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white d-flex align-items-center" style="min-height: 400px;">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="card-header titulo-header text-white text-center fw-bold">Base de Conhecimento</h1><br>
+                    <p class="lead mb-4">Aprenda tudo sobre mecânica automotiva, manutenção e terminologia técnica</p>
+                    
+                    <!-- Search bar -->
+                    <div class="input-group input-group-lg shadow-lg">
+                        <span class="input-group-text bg-white border-0"><i class="ri-search-line text-muted"></i></span>
+                        <input type="text" class="form-control border-0" id="searchKnowledge" 
+                               placeholder="Buscar artigos, tutoriais, glossário...">
+                        <button class="btn btn-vermelho-pitstop" type="button">Pesquisar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Categorias</h2>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <div class="knowledge-category-card">
+                        <div class="category-icon">
+                            <i class="ri-tools-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Mecânica Básica</h4>
+                        <p class="text-muted mb-4">Entenda o funcionamento dos principais componentes do seu veículo</p>
+                        <a href="#mecanica" class="btn btn-outline-azul-pitstop">Ver Artigos <i class="ri-arrow-right-line ms-2"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="knowledge-category-card">
+                        <div class="category-icon">
+                            <i class="ri-settings-3-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Manutenção</h4>
+                        <p class="text-muted mb-4">Guias completos de manutenção preventiva e corretiva</p>
+                        <a href="#manutencao" class="btn btn-outline-azul-pitstop">Ver Artigos <i class="ri-arrow-right-line ms-2"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="knowledge-category-card">
+                        <div class="category-icon">
+                            <i class="ri-book-open-line"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Glossário Técnico</h4>
+                        <p class="text-muted mb-4">Dicionário completo de termos automotivos</p>
+                        <a href="#glossario" class="btn btn-outline-azul-pitstop">Ver Termos <i class="ri-arrow-right-line ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="mecanica" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Artigos em Destaque</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="knowledge-article-card">
+                        <div class="article-image" style="background: linear-gradient(135deg, #283273, #BE1523); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center;">
+                            <i class="ri-engine-line" style="font-size: 4rem; color: white;"></i>
+                        </div>
+                        <div class="p-4">
+                            <span class="badge bg-azul-pitstop mb-3">Mecânica</span>
+                            <h4 class="fw-bold mb-3">Como funciona o motor de combustão interna</h4>
+                            <p class="text-muted mb-4">Entenda o ciclo de funcionamento, componentes principais e a diferença entre motores 4 e 2 tempos.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-vermelho-pitstop" onclick="toggleArticle(1)">
+                                    Ler Artigo <i class="ri-arrow-right-line ms-2"></i>
+                                </button>
+                                <small class="text-muted"><i class="ri-time-line me-1"></i>10 min leitura</small>
+                            </div>
+                            
+                            <div id="article-1" class="article-content mt-4" style="display: none;">
+                                <hr>
+                                <h5 class="fw-bold mt-4 mb-3">O que é o motor de combustão interna?</h5>
+                                <p>O motor de combustão interna é o coração do seu veículo. Ele converte energia química do combustível em energia mecânica que move as rodas.</p>
+                                
+                                <h6 class="fw-bold mt-4 mb-2">Componentes Principais:</h6>
+                                <ul>
+                                    <li><strong>Pistões:</strong> Movem-se para cima e para baixo dentro dos cilindros</li>
+                                    <li><strong>Velas de Ignição:</strong> Criam a faísca que inicia a combustão</li>
+                                    <li><strong>Válvulas:</strong> Controlam entrada de ar/combustível e saída de gases</li>
+                                    <li><strong>Virabrequim:</strong> Converte movimento linear em rotacional</li>
+                                </ul>
+                                
+                                <div class="alert alert-info mt-4">
+                                    <i class="ri-lightbulb-line me-2"></i><strong>Dica:</strong> Manutenção regular do motor aumenta sua vida útil em até 50%!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="knowledge-article-card">
+                        <div class="article-image" style="background: linear-gradient(135deg, #BE1523, #283273); height: 200px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: center;">
+                            <i class="ri-car-washing-line" style="font-size: 4rem; color: white;"></i>
+                        </div>
+                        <div class="p-4">
+                            <span class="badge bg-vermelho-pitstop mb-3">Manutenção</span>
+                            <h4 class="fw-bold mb-3">Guia completo de troca de óleo</h4>
+                            <p class="text-muted mb-4">Saiba quando, como e qual tipo de óleo usar no seu veículo para garantir máxima performance.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn btn-vermelho-pitstop" onclick="toggleArticle(2)">
+                                    Ler Artigo <i class="ri-arrow-right-line ms-2"></i>
+                                </button>
+                                <small class="text-muted"><i class="ri-time-line me-1"></i>8 min leitura</small>
+                            </div>
+                            
+                            <div id="article-2" class="article-content mt-4" style="display: none;">
+                                <hr>
+                                <h5 class="fw-bold mt-4 mb-3">Quando trocar o óleo do motor?</h5>
+                                <p>A troca de óleo é uma das manutenções mais importantes para a saúde do seu veículo.</p>
+                                
+                                <h6 class="fw-bold mt-4 mb-2">Intervalo Recomendado:</h6>
+                                <ul>
+                                    <li><strong>Óleo Mineral:</strong> 5.000 a 7.000 km</li>
+                                    <li><strong>Óleo Sintético:</strong> 10.000 a 15.000 km</li>
+                                    <li><strong>Óleo Semi-Sintético:</strong> 7.000 a 10.000 km</li>
+                                </ul>
+                                
+                                <h6 class="fw-bold mt-4 mb-2">Tipos de Óleo:</h6>
+                                <p>Sempre consulte o manual do proprietário para a viscosidade correta (ex: 5W-30, 10W-40)</p>
+                                
+                                <div class="alert alert-warning mt-4">
+                                    <i class="ri-alert-line me-2"></i><strong>Atenção:</strong> Trocar o filtro de óleo junto é essencial para o bom funcionamento!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Perguntas Frequentes</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="ri-questionnaire-line me-3 text-vermelho-pitstop"></i>
+                                    O que é o câmbio CVT?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    CVT (Continuously Variable Transmission) é um tipo de transmissão automática que não usa engrenagens fixas. Oferece transições suaves e melhor economia de combustível.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="ri-questionnaire-line me-3 text-vermelho-pitstop"></i>
+                                    Qual a diferença entre Flex e Gasolina?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Motores Flex podem usar gasolina, etanol ou qualquer mistura dos dois. Oferecem mais flexibilidade de abastecimento, mas consomem mais etanol devido ao seu menor poder calorífico.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="ri-questionnaire-line me-3 text-vermelho-pitstop"></i>
+                                    O que significa "cv" e "hp"?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ambos são unidades de potência do motor. CV (Cavalo-Vapor) é mais usado no Brasil, enquanto HP (Horse Power) é usado internacionalmente. 1 CV ≈ 0.98 HP.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="ri-questionnaire-line me-3 text-vermelho-pitstop"></i>
+                                    Como funciona o sistema de freios ABS?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    ABS (Anti-lock Braking System) impede o travamento das rodas durante frenagens bruscas, mantendo a dirigibilidade do veículo e reduzindo a distância de parada em pisos escorregadios.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glossary Section -->
+    <section id="glossario" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Glossário Técnico</h2>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">ABS</h5>
+                                        <p class="text-muted mb-0">Sistema Antitravamento de Freios</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">Torque</h5>
+                                        <p class="text-muted mb-0">Força de rotação do motor (medida em Nm)</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">Cilindrada</h5>
+                                        <p class="text-muted mb-0">Volume total dos cilindros do motor</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">ESP</h5>
+                                        <p class="text-muted mb-0">Controle Eletrônico de Estabilidade</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">Turbo</h5>
+                                        <p class="text-muted mb-0">Turbina que aumenta potência do motor</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="glossary-term">
+                                        <h5 class="fw-bold text-azul-pitstop mb-2">Suspensão Independente</h5>
+                                        <p class="text-muted mb-0">Cada roda move-se independentemente</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button class="btn btn-outline-azul-pitstop">
+                                    <i class="ri-file-list-line me-2"></i>Ver Glossário Completo
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-center mb-5">Tutoriais em Vídeo</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div style="background: linear-gradient(135deg, #283273, #BE1523); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
+                                <i class="ri-play-circle-line" style="font-size: 4rem; color: white;"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-2">Troca de Pneus</h5>
+                            <p class="text-muted small mb-3">Aprenda a trocar o pneu do seu carro em caso de emergência</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-azul-pitstop">12:45</span>
+                                <small class="text-muted"><i class="ri-eye-line me-1"></i>15.2k visualizações</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div style="background: linear-gradient(135deg, #BE1523, #283273); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
+                                <i class="ri-play-circle-line" style="font-size: 4rem; color: white;"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-2">Verificação de Fluidos</h5>
+                            <p class="text-muted small mb-3">Como verificar níveis de óleo, água e fluido de freio</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-vermelho-pitstop">8:30</span>
+                                <small class="text-muted"><i class="ri-eye-line me-1"></i>22.8k visualizações</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div style="background: linear-gradient(135deg, #283273, #BE1523); height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
+                                <i class="ri-play-circle-line" style="font-size: 4rem; color: white;"></i>
+                            </div>
+                        </div>
+                        <div class="p-3">
+                            <h5 class="fw-bold mb-2">Leitura do Painel</h5>
+                            <p class="text-muted small mb-3">Entenda todos os símbolos e alertas do painel do carro</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-azul-pitstop">15:20</span>
+                                <small class="text-muted"><i class="ri-eye-line me-1"></i>31.5k visualizações</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a class="navbar-brand fw-bold d-flex align-items-center mb-3" href="index.html">
+                        <img src="public/images/pic-nova-logo-ps.webp" alt="logo PIT STOP" height="40" class="me-2">
+                    </a>
+                    <p class="text-white-50">Sua consultoria automotiva de confiança</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Contato</h6>
+                    <p class="text-white-50"><i class="ri-mail-line me-2"></i>veiculospitstop@pitstop.com.br</p>
+                    <p class="text-white-50"><i class="ri-phone-line me-2"></i>(31) 91234-5678</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold mb-3">Redes Sociais</h6>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.instagram.com/pitstopconsultoria/" target="_blank" class="text-white"><i class="ri-instagram-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-facebook-circle-line fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="ri-linkedin-box-line fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p class="mb-0 text-white-50">&copy; 2025 PIT STOP. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleArticle(id) {
+            const article = document.getElementById(`article-${id}`);
+            if (article.style.display === 'none') {
+                article.style.display = 'block';
+            } else {
+                article.style.display = 'none';
+            }
+        }
+        
+        // Search functionality
+        document.getElementById('searchKnowledge').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            console.log('[v0] Searching for:', searchTerm);
+            // Search implementation would go here
+        });
+    </script>
+</body>
+
+</html>
